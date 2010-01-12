@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description = %q{hatena keyword api}
   s.email = %q{maiha@wota.jp}
   s.extra_rdoc_files = ["README", "MIT-LICENSE"]
-  s.files = ["MIT-LICENSE", "README", "Rakefile", "lib/hatena.rb", "lib/hatena", "lib/hatena/null.rb", "lib/hatena/keyword.rb", "spec/provide_helper.rb", "spec/keyword_spec.rb", "spec/its_helper.rb", "spec/spec_helper.rb"]
+  s.files = ["MIT-LICENSE", "README", "Rakefile", "lib/hatena.rb", "lib/hatena-keyword.rb", "lib/hatena", "lib/hatena/null.rb", "lib/hatena/keyword.rb", "spec/provide_helper.rb", "spec/keyword_spec.rb", "spec/its_helper.rb", "spec/spec_helper.rb"]
   s.homepage = %q{http://github.com/maiha/hatena-keyword}
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{asakusarb}
