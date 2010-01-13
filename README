@@ -7,7 +7,19 @@ hatena-keyword
 Example
 =======
 
+  Extract famous people names from given string
 
+    Hatena::Keyword["大井町駅で石村舞波のポスター発見"]
+    => ["石村舞波"]
+
+    Hatena::Keyword["嗣永桃子と鈴木愛理のカップリングが好き Part25"]
+    => ["嗣永桃子", "鈴木愛理"]
+
+
+Advanced
+========
+
+  See also: http://wota.jp/ac/?date=20100113
 
 
 Author
