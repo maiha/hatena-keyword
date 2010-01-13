@@ -22,6 +22,7 @@ spec = Gem::Specification.new do |s|
   s.email = EMAIL
   s.homepage = HOMEPAGE
   s.require_path = 'lib'
+  s.add_dependency('dsl_accessor', '>= 0.3.3')
   s.files = %w(MIT-LICENSE README Rakefile) + Dir.glob("{lib,spec}/**/*")
 end
 

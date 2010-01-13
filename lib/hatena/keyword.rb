@@ -25,8 +25,6 @@ module Hatena
     ### Service
 
     class Service
-      attr_accessor :result
-
       dsl_accessor :logger, Null.new, :instance => true
       dsl_accessor :default_options, proc{{}}
 
@@ -54,6 +52,10 @@ module Hatena
         def option(key)
           default_options[key]
         end
+
+        def result
+          @result || execute
+        end
     end
 
     class Link < Service
@@ -69,12 +71,8 @@ module Hatena
 
       def execute
         super
-        return keywords
-      end
-
-      def keywords
         # result: {"wordlist"=>[{"score"=>78, "cname"=>"idol", "word"=>"石村舞波", "refcount"=>4}]}
-        @result["wordlist"].map do |h|
+        result["wordlist"].map do |h|
           Hatena::Keyword.new(h["word"], h["score"], h["cname"], h["refcount"])
         end
       end
